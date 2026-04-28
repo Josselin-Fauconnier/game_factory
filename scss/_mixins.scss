@@ -1,0 +1,46 @@
+@use 'variables' as *;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $mobile) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: $tablet) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (max-width: $desktop) { @content; }
+  }
+}
+
+@mixin transition($prop: all, $duration: 0.3s) {
+  transition: $prop $duration ease;
+}
+
+@mixin button($bg, $color, $border: none) {
+  width: $btn-width;
+  height: $btn-height;
+  background-color: $bg;
+  color: $color;
+  border: $border;
+  border-radius: $btn-radius;
+  font-family: $font-primary;
+  font-size: $nav-font-size;
+  font-weight: $nav-font-weight;
+  text-align: center;
+  cursor: pointer;
+  @include transition;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}

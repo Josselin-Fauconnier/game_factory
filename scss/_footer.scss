@@ -1,0 +1,47 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.footer {
+  background-color: $black;
+  color: $white;
+  padding: $spacing-xl $spacing-md;
+
+  &__container {
+    max-width: 700px;
+    margin: 0 auto;
+    @include flex-between;
+
+    @include respond-to(tablet) {
+      flex-direction: column;
+      gap: $spacing-lg;
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  &__links {
+    display: flex;
+    gap: $spacing-md;
+
+    a {
+      @include transition;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__copy {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    text-align: center;
+    margin-top: $spacing-lg;
+    max-width: 700px;
+    margin-inline: auto;
+  }
+}
