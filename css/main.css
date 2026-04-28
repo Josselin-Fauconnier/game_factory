@@ -127,29 +127,6 @@ img {
     justify-content: center;
   }
 }
-.header__burger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 54px;
-  height: 35px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  opacity: 1;
-}
-.header__burger span {
-  display: block;
-  width: 54px;
-  height: 0;
-  border: 5px solid #000000;
-}
-@media (min-width: 768px) {
-  .header__burger {
-    display: none;
-  }
-}
 
 .footer {
   background-color: #000000;
@@ -194,21 +171,79 @@ img {
 }
 
 .section {
-  padding: 64px 16px;
+  width: 100%;
+  min-height: 500px;
+  background-color: #F3F3F3;
+  opacity: 1;
+  position: relative;
 }
 .section__container {
-  max-width: 700px;
+  max-width: 1440px;
+  height: 100%;
   margin: 0 auto;
+  padding: 0 64px;
 }
 .section__title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 32px;
+  width: 400px;
+  height: 100px;
+  font-family: "Noto Sans Thai", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 56px;
+  margin-left: 100px;
+}
+.section__image {
+  width: 517px;
+  height: 389px;
+  border-radius: 5px;
+  object-fit: contain;
+  position: absolute;
+  top: 56px;
+  left: 820px;
+}
+.section__btns {
+  display: flex;
+  gap: 14px;
+  margin-top: 52px;
+  margin-left: 100px;
+}
+.section__btn {
+  width: 100px;
+  height: 41px;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  font-family: "Noto Sans Thai", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.section__btn:hover {
+  opacity: 0.85;
+}
+.section__btn {
+  width: 157px;
+  height: 41px;
 }
 .section__subtitle {
-  font-size: 1rem;
-  opacity: 0.7;
-  margin-bottom: 64px;
+  width: 400px;
+  height: 100px;
+  font-family: "Noto Sans Thai", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 52px;
+  margin-left: 100px;
 }
 
 /*# sourceMappingURL=main.css.map */
